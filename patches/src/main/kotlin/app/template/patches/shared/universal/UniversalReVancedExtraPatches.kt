@@ -323,7 +323,9 @@ val universalDisableAdSdkCallsPatch = bytecodePatch(
     execute {
         val adPackages = listOf(
             "Lcom/applovin/",
+            "Lcom/google/firebase/crashlytics/",
             "Lcom/facebook/ads/",
+            "Lcom/facebook/appevents/",
             "Lcom/fyber/inneractive/sdk/",
             "Lcom/google/android/gms/ads/",
             "Lcom/mbridge/msdk/",
@@ -331,7 +333,8 @@ val universalDisableAdSdkCallsPatch = bytecodePatch(
             "Lcom/smaato/sdk/",
             "Lcom/tradplus/ads/",
             "Lcom/unity3d/ads/",
-            "Lcom/unity3d/services/",
+            "Lcom/unity3d/analytics/",
+            "Lcom/unity3d/ironsourceads/",
             "Lcom/vungle/",
             "Lcom/ironsource/",
             "Lcom/bytedance/sdk/",
@@ -341,6 +344,9 @@ val universalDisableAdSdkCallsPatch = bytecodePatch(
             "Lcom/kwad/sdk/",
             "Lcom/sigmob/",
             "Lcom/pangle/",
+            "Lcom/huawei/hms/ads/",
+            "Lcom/bytedance/sdk/openadsdk/",
+            "Lcom/mixpanel/android/mpmetrics/",
         )
         val voidMethodNames = setOf(
             "loadAd",
