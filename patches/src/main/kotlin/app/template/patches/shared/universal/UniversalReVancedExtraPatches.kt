@@ -271,6 +271,7 @@ val universalRemoveAdManifestEntriesPatch = resourcePatch(
                 "android.permission.RUN_USER_INITIATED_JOBS",
             )
             val adNames = listOf(
+                "com.google.ads",
                 "com.google.android.gms.ads",
                 "com.google.android.tv.ads",
                 "com.google.android.gms.measurement",
@@ -333,12 +334,14 @@ val universalDisableAdSdkCallsPatch = bytecodePatch(
     execute {
         val adPackages = listOf(
             "Lcom/applovin/",
-            "Lcom/google/ads/",
-            "Lcom/google/firebase/crashlytics/",
             "Lcom/facebook/ads/",
             "Lcom/facebook/appevents/",
+            "Lcom/facebook/feed/ads/",
+            "Lcom/facebook/feed/platformads/",
             "Lcom/fyber/inneractive/sdk/",
+            "Lcom/google/ads/",
             "Lcom/google/android/gms/ads/",
+            "Lcom/google/firebase/crashlytics/",
             "Lcom/mbridge/msdk/",
             "Lcom/inmobi/ads/",
             "Lcom/smaato/sdk/",
@@ -358,6 +361,7 @@ val universalDisableAdSdkCallsPatch = bytecodePatch(
             "Lcom/huawei/hms/ads/",
             "Lcom/bytedance/sdk/openadsdk/",
             "Lcom/mixpanel/android/mpmetrics/",
+            "Lcom/adtima/",
         )
         val voidMethodNames = setOf(
             "isAdLoaded",
