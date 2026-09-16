@@ -333,6 +333,7 @@ val universalDisableAdSdkCallsPatch = bytecodePatch(
     execute {
         val adPackages = listOf(
             "Lcom/applovin/",
+            "Lcom/google/ads/",
             "Lcom/google/firebase/crashlytics/",
             "Lcom/facebook/ads/",
             "Lcom/facebook/appevents/",
@@ -359,6 +360,7 @@ val universalDisableAdSdkCallsPatch = bytecodePatch(
             "Lcom/mixpanel/android/mpmetrics/",
         )
         val voidMethodNames = setOf(
+            "isAdLoaded",
             "loadAd",
             "loadAds",
             "load",
@@ -381,11 +383,15 @@ val universalDisableAdSdkCallsPatch = bytecodePatch(
             "loadDrawFeedAd",
             "loadExpressDrawFeedAd",
             "loadSplashScreenAd",
+            "requestBannerAd",
+            "requestInterstitialAd",
+            "requestNativeAd",
             "showSplashView",
             "showSplashClickEyeView",
             "showSplashCardView",
             "showRewardVideoAd",
             "showFullScreenVideoAd",
+            "showInterstitial",
             "showInterstitialAd",
             "showSplashMiniWindow",
             "showSplashMiniWindowIfNeeded",
